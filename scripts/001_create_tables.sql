@@ -2,48 +2,27 @@
 CREATE TABLE IF NOT EXISTS sponsorship_packages (
   id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
   title TEXT NOT NULL,
-  category TEXT NOT NULL CHECK (category IN ('Espacio Físico', 'Pieza', 'Espacio en Redes Sociales')),
+  category TEXT NOT NULL,
   description TEXT NOT NULL,
   created_at TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
   updated_at TIMESTAMP WITH TIME ZONE DEFAULT NOW()
 );
 
--- Create admin_users table for authentication
-CREATE TABLE IF NOT EXISTS admin_users (
-  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
-  email TEXT UNIQUE NOT NULL,
-  password_hash TEXT NOT NULL,
-  created_at TIMESTAMP WITH TIME ZONE DEFAULT NOW()
-);
-
 -- Enable Row Level Security
 ALTER TABLE sponsorship_packages ENABLE ROW LEVEL SECURITY;
-ALTER TABLE admin_users ENABLE ROW LEVEL SECURITY;
 
--- Create policies for sponsorship_packages (public read, authenticated write)
+-- Drop existing policies if they exist
+DROP POLICY IF EXISTS "Allow public read on sponsorship_packages" ON sponsorship_packages;
+DROP POLICY IF EXISTS "Allow all operations on sponsorship_packages" ON sponsorship_packages;
+
+-- Create policy for sponsorship_packages (allow all for now, we'll handle auth in the app)
 CREATE POLICY "Allow public read on sponsorship_packages" 
   ON sponsorship_packages 
   FOR SELECT 
   USING (true);
 
-CREATE POLICY "Allow authenticated insert on sponsorship_packages" 
+CREATE POLICY "Allow all operations on sponsorship_packages" 
   ON sponsorship_packages 
-  FOR INSERT 
-  WITH CHECK (auth.role() = 'authenticated');
-
-CREATE POLICY "Allow authenticated update on sponsorship_packages" 
-  ON sponsorship_packages 
-  FOR UPDATE 
-  USING (auth.role() = 'authenticated');
-
-CREATE POLICY "Allow authenticated delete on sponsorship_packages" 
-  ON sponsorship_packages 
-  FOR DELETE 
-  USING (auth.role() = 'authenticated');
-
--- Create policy for admin_users (only service role can access)
-CREATE POLICY "Allow service role access on admin_users" 
-  ON admin_users 
   FOR ALL 
   USING (true);
 
@@ -70,5 +49,4 @@ INSERT INTO sponsorship_packages (title, category, description) VALUES
   ('Publicación en Instagram', 'Espacio en Redes Sociales', 'Una publicación dedicada en nuestro perfil de Instagram con más de 3,400 seguidores. Incluye diseño gráfico profesional y copy optimizado para engagement.'),
   ('Historia Destacada', 'Espacio en Redes Sociales', 'Historia destacada permanente en nuestro perfil de Instagram. Visible las 24 horas del día para todos nuestros seguidores y visitantes del perfil.'),
   ('Sala de Conferencias', 'Espacio Físico', 'Espacio exclusivo para realizar charla o taller de 45 minutos durante el evento. Incluye proyector, sistema de sonido y moderador.'),
-  ('Folleto en Kit de Bienvenida', 'Pieza', 'Inclusión de folleto o material promocional en el kit de bienvenida que reciben todos los asistentes registrados al evento.')
-ON CONFLICT DO NOTHING;
+  ('Folleto en Kit de Bienvenida', 'Pieza', 'Inclusión de folleto o material promocional en el kit de bienvenida que reciben todos los asistentes registrados al evento.');
