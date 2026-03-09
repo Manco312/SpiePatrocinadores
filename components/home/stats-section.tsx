@@ -40,12 +40,23 @@ const stats = [
   },
 ];
 
+function formatNumber(num: number): string {
+  return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}
+
 function AnimatedNumber({ value, suffix }: { value: number; suffix: string }) {
   const [displayValue, setDisplayValue] = useState(0);
   const [hasAnimated, setHasAnimated] = useState(false);
+  const [isMounted, setIsMounted] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
+  useEffect(() => {
+    if (!isMounted) return;
+    
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting && !hasAnimated) {
@@ -76,11 +87,11 @@ function AnimatedNumber({ value, suffix }: { value: number; suffix: string }) {
     }
 
     return () => observer.disconnect();
-  }, [value, hasAnimated]);
+  }, [value, hasAnimated, isMounted]);
 
   return (
     <div ref={ref} className="text-4xl sm:text-5xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-      {displayValue.toLocaleString()}{suffix}
+      {isMounted ? formatNumber(displayValue) : formatNumber(0)}{suffix}
     </div>
   );
 }
@@ -96,7 +107,7 @@ export function StatsSection() {
             </span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto text-balance">
-            Numeros que demuestran el impacto de nuestra comunidad en redes sociales 
+            Cifras que demuestran el impacto de nuestra comunidad en redes sociales 
             y el potencial de exposicion para nuestros patrocinadores.
           </p>
         </div>
