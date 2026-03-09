@@ -11,19 +11,13 @@ export function AboutSection() {
             </h2>
             <div className="space-y-4 text-muted-foreground">
               <p>
-                El Capítulo SPIE de la Universidad EAFIT es una organización estudiantil 
-                dedicada a la promoción y divulgación de la óptica y la fotónica, 
-                áreas fundamentales para el desarrollo tecnológico del siglo XXI.
+                {"El Cap\u00EDtulo SPIE de la Universidad EAFIT es una organizaci\u00F3n estudiantil dedicada a la promoci\u00F3n y divulgaci\u00F3n de la \u00F3ptica y la fot\u00F3nica, \u00E1reas fundamentales para el desarrollo tecnol\u00F3gico del siglo XXI."}
               </p>
               <p>
-                Somos parte de SPIE, la Sociedad Internacional de Óptica y Fotónica, 
-                una de las organizaciones científicas más prestigiosas del mundo con 
-                más de 20,000 miembros en todo el planeta.
+                {"Somos parte de SPIE, la Sociedad Internacional de \u00D3ptica y Fot\u00F3nica, una de las organizaciones cient\u00EDficas m\u00E1s prestigiosas del mundo con m\u00E1s de 20,000 miembros en todo el planeta."}
               </p>
               <p>
-                Nuestra misión es inspirar a la próxima generación de científicos e 
-                ingenieros a través de eventos, talleres y actividades de divulgación 
-                científica que acercan la luz y sus aplicaciones a la comunidad.
+                {"Nuestra misi\u00F3n es inspirar a la pr\u00F3xima generaci\u00F3n de cient\u00EDficos e ingenieros a trav\u00E9s de eventos, talleres y actividades de divulgaci\u00F3n cient\u00EDfica que acercan la luz y sus aplicaciones a la comunidad."}
               </p>
             </div>
           </div>
@@ -47,7 +41,7 @@ export function AboutSection() {
                   />
                 </svg>
                 <p className="text-muted-foreground text-sm">
-                  Espacio para imagen del Capítulo
+                  {"Espacio para imagen del Cap\u00EDtulo"}
                 </p>
               </div>
             </div>
