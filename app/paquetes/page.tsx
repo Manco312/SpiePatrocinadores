@@ -1,23 +1,19 @@
-import { createClient } from "@/lib/supabase/server";
+import { prisma } from "@/lib/prisma";
 import { PackagesList } from "@/components/packages/packages-list";
 import { Footer } from "@/components/footer";
-import { SponsorshipPackage } from "@/lib/types";
 
 export const revalidate = 60; // Revalidate every 60 seconds
 
-async function getPackages(): Promise<SponsorshipPackage[]> {
-  const supabase = await createClient();
-  const { data, error } = await supabase
-    .from("sponsorship_packages")
-    .select("*")
-    .order("created_at", { ascending: false });
-
-  if (error) {
+async function getPackages() {
+  try {
+    const packages = await prisma.sponsorshipPackage.findMany({
+      orderBy: { createdAt: "desc" },
+    });
+    return packages;
+  } catch (error) {
     console.error("Error fetching packages:", error);
     return [];
   }
-
-  return data || [];
 }
 
 export default async function PaquetesPage() {

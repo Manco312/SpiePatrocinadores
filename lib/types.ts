@@ -1,13 +1,8 @@
-export interface SponsorshipPackage {
-  id: string;
-  title: string;
-  category: "Espacio Físico" | "Pieza" | "Espacio en Redes Sociales";
-  description: string;
-  created_at: string;
-  updated_at: string;
-}
+import { SponsorshipPackage as PrismaSponsorshipPackage } from "@prisma/client";
 
-export type PackageCategory = SponsorshipPackage["category"];
+export type SponsorshipPackage = PrismaSponsorshipPackage;
+
+export type PackageCategory = "Espacio Físico" | "Pieza" | "Espacio en Redes Sociales";
 
 export const CATEGORIES: PackageCategory[] = [
   "Espacio Físico",

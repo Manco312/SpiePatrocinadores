@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { createClient } from "@/lib/supabase/server";
+import { prisma } from "@/lib/prisma";
 import { verifySession } from "@/lib/auth";
 
 interface RouteParams {
@@ -27,22 +27,14 @@ export async function PUT(request: NextRequest, { params }: RouteParams) {
       );
     }
 
-    const supabase = await createClient();
-    
-    const { data, error } = await supabase
-      .from("sponsorship_packages")
-      .update({ title, category, description })
-      .eq("id", id)
-      .select()
-      .single();
-
-    if (error) {
-      console.error("Supabase error:", error);
-      return NextResponse.json(
-        { error: "Error al actualizar el paquete" },
-        { status: 500 }
-      );
-    }
+    const data = await prisma.sponsorshipPackage.update({
+      where: { id },
+      data: {
+        title,
+        category,
+        description,
+      },
+    });
 
     return NextResponse.json(data);
   } catch (error) {
@@ -66,20 +58,10 @@ export async function DELETE(request: NextRequest, { params }: RouteParams) {
     }
 
     const { id } = await params;
-    const supabase = await createClient();
     
-    const { error } = await supabase
-      .from("sponsorship_packages")
-      .delete()
-      .eq("id", id);
-
-    if (error) {
-      console.error("Supabase error:", error);
-      return NextResponse.json(
-        { error: "Error al eliminar el paquete" },
-        { status: 500 }
-      );
-    }
+    await prisma.sponsorshipPackage.delete({
+      where: { id },
+    });
 
     return NextResponse.json({ success: true });
   } catch (error) {

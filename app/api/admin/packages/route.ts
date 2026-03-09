@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { createClient } from "@/lib/supabase/server";
+import { prisma } from "@/lib/prisma";
 import { verifySession } from "@/lib/auth";
 
 export async function POST(request: NextRequest) {
@@ -22,21 +22,13 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    const supabase = await createClient();
-    
-    const { data, error } = await supabase
-      .from("sponsorship_packages")
-      .insert([{ title, category, description }])
-      .select()
-      .single();
-
-    if (error) {
-      console.error("Supabase error:", error);
-      return NextResponse.json(
-        { error: "Error al crear el paquete" },
-        { status: 500 }
-      );
-    }
+    const data = await prisma.sponsorshipPackage.create({
+      data: {
+        title,
+        category,
+        description,
+      },
+    });
 
     return NextResponse.json(data);
   } catch (error) {

@@ -1,8 +1,7 @@
-import { createClient } from "@/lib/supabase/server";
+import { prisma } from "@/lib/prisma";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { Footer } from "@/components/footer";
-import { SponsorshipPackage } from "@/lib/types";
 
 interface PageProps {
   params: Promise<{ id: string }>;
@@ -21,19 +20,16 @@ function getCategoryClass(category: string) {
   }
 }
 
-async function getPackage(id: string): Promise<SponsorshipPackage | null> {
-  const supabase = await createClient();
-  const { data, error } = await supabase
-    .from("sponsorship_packages")
-    .select("*")
-    .eq("id", id)
-    .single();
-
-  if (error || !data) {
+async function getPackage(id: string) {
+  try {
+    const pkg = await prisma.sponsorshipPackage.findUnique({
+      where: { id },
+    });
+    return pkg;
+  } catch (error) {
+    console.error("Error fetching package:", error);
     return null;
   }
-
-  return data;
 }
 
 export default async function PackageDetailPage({ params }: PageProps) {
@@ -78,10 +74,9 @@ export default async function PackageDetailPage({ params }: PageProps) {
           </div>
 
           <div className="mt-8 pt-8 border-t border-border/50">
-            <h2 className="text-xl font-semibold mb-4">¿Interesado en este paquete?</h2>
+            <h2 className="text-xl font-semibold mb-4">{"¿Interesado en este paquete?"}</h2>
             <p className="text-muted-foreground mb-6">
-              Contáctanos para más información sobre este paquete de patrocinio y cómo 
-              puede beneficiar a tu marca.
+              {"Contáctanos para más información sobre este paquete de patrocinio y cómo puede beneficiar a tu marca."}
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link href="/contacto" className="btn-primary text-center">
