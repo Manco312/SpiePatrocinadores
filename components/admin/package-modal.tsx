@@ -19,7 +19,7 @@ export function PackageModal({ isOpen, onClose, onSave, editingPackage, loading 
   useEffect(() => {
     if (editingPackage) {
       setTitle(editingPackage.title);
-      setCategory(editingPackage.category);
+      setCategory(editingPackage.category as PackageCategory);
       setDescription(editingPackage.description);
     } else {
       setTitle("");
