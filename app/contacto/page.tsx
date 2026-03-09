@@ -1,4 +1,5 @@
 import { Footer } from "@/components/footer";
+import Image from "next/image";
 
 export default function ContactoPage() {
   return (
@@ -22,8 +23,14 @@ export default function ContactoPage() {
             {/* Organization Info */}
             <div className="glass-card rounded-2xl p-8 glow-border">
               <div className="flex items-center gap-4 mb-6">
-                <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-primary to-accent flex items-center justify-center">
-                  <span className="text-white font-bold">SPIE</span>
+                <div className="flex items-center justify-center">
+                  <Image
+                    src="/logo-spie-blanco.png"
+                    alt="SPIE Logo"
+                    width={100}
+                    height={100}
+                    className="object-contain"
+                  />
                 </div>
                 <div>
                   <h2 className="text-xl font-bold">Capítulo SPIE</h2>
@@ -62,8 +69,8 @@ export default function ContactoPage() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-sm mb-1">Teléfono</h3>
-                    <a href="tel:+573052974023" className="text-muted-foreground hover:text-accent transition-colors text-sm">
-                      +57 305 297 4023
+                    <a href="tel:+573195991889" className="text-muted-foreground hover:text-accent transition-colors text-sm">
+                      +57 319 599 1889
                     </a>
                   </div>
                 </div>

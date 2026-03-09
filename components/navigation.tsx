@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
+import Image from "next/image";
 
 export function Navigation() {
   const pathname = usePathname();
@@ -29,8 +30,14 @@ export function Navigation() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <Link href="/" className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center">
-              <span className="text-white font-bold text-sm">SPIE</span>
+            <div className="flex items-center justify-center">
+              <Image
+                src="/logo-spie-blanco.png"
+                alt="SPIE Logo"
+                width={50}
+                height={50}
+                className="object-contain"
+              />
             </div>
             <span className="font-semibold text-lg hidden sm:block">Capítulo SPIE EAFIT</span>
           </Link>

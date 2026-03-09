@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export function Footer() {
   return (
@@ -7,8 +8,14 @@ export function Footer() {
         <div className="grid md:grid-cols-3 gap-8">
           <div>
             <div className="flex items-center gap-3 mb-4">
-              <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center">
-                <span className="text-white font-bold text-sm">SPIE</span>
+              <div className="flex items-center justify-center">
+                <Image
+                  src="/logo-spie-blanco.png"
+                  alt="SPIE Logo"
+                  width={60}
+                  height={60}
+                  className="object-contain"
+                />
               </div>
               <div>
                 <h3 className="font-semibold">Capítulo SPIE</h3>
@@ -50,8 +57,8 @@ export function Footer() {
                 </a>
               </li>
               <li>
-                <a href="tel:+573052974023" className="hover:text-foreground transition-colors">
-                  +57 305 297 4023
+                <a href="tel:+573195991889" className="hover:text-foreground transition-colors">
+                  +57 319 599 1889
                 </a>
               </li>
             </ul>
