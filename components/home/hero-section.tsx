@@ -26,16 +26,16 @@ export function HeroSection() {
 
         <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold mb-6">
           <span className="bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent glow-text">
-            Capítulo SPIE
+            Capitulo SPIE
           </span>
           <br />
           <span className="text-foreground">Universidad EAFIT</span>
         </h1>
 
         <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto mb-8 text-balance">
-          Somos el capítulo estudiantil de SPIE en la Universidad EAFIT, 
-          dedicados a promover la óptica y la fotónica en Colombia. 
-          Únete como patrocinador y sé parte del futuro de la ciencia.
+          Somos el capitulo estudiantil de SPIE en la Universidad EAFIT, 
+          dedicados a promover la optica y la fotonica en Colombia. 
+          Unete como patrocinador y se parte del futuro de la ciencia.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -43,7 +43,7 @@ export function HeroSection() {
             Ver Paquetes de Patrocinio
           </Link>
           <Link href="/contacto" className="btn-secondary text-center">
-            Contáctanos
+            Contactanos
           </Link>
         </div>
 

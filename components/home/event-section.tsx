@@ -19,10 +19,10 @@ export function EventSection() {
                   </span>
                 </h2>
                 <p className="text-muted-foreground text-lg mb-6 text-balance">
-                  Nuestro evento insignia dedicado a la óptica y la fotónica. 
+                  Nuestro evento insignia dedicado a la optica y la fotonica. 
                   Una semana llena de charlas, talleres, demostraciones y 
                   actividades que celebran la luz y sus infinitas aplicaciones 
-                  en la ciencia y la tecnología.
+                  en la ciencia y la tecnologia.
                 </p>
 
                 <div className="grid sm:grid-cols-2 gap-4">
@@ -33,7 +33,7 @@ export function EventSection() {
                       </svg>
                     </div>
                     <div>
-                      <h4 className="font-semibold text-sm">5 Días de Evento</h4>
+                      <h4 className="font-semibold text-sm">5 Dias de Evento</h4>
                       <p className="text-muted-foreground text-sm">Actividades continuas</p>
                     </div>
                   </div>
@@ -57,7 +57,7 @@ export function EventSection() {
                       </svg>
                     </div>
                     <div>
-                      <h4 className="font-semibold text-sm">Talleres Prácticos</h4>
+                      <h4 className="font-semibold text-sm">Talleres Practicos</h4>
                       <p className="text-muted-foreground text-sm">Experiencia hands-on</p>
                     </div>
                   </div>
@@ -70,7 +70,7 @@ export function EventSection() {
                     </div>
                     <div>
                       <h4 className="font-semibold text-sm">Demostraciones</h4>
-                      <p className="text-muted-foreground text-sm">Ciencia en acción</p>
+                      <p className="text-muted-foreground text-sm">Ciencia en accion</p>
                     </div>
                   </div>
                 </div>

@@ -11,13 +11,13 @@ export function AboutSection() {
             </h2>
             <div className="space-y-4 text-muted-foreground">
               <p>
-                {"El Cap\u00EDtulo SPIE de la Universidad EAFIT es una organizaci\u00F3n estudiantil dedicada a la promoci\u00F3n y divulgaci\u00F3n de la \u00F3ptica y la fot\u00F3nica, \u00E1reas fundamentales para el desarrollo tecnol\u00F3gico del siglo XXI."}
+                El Capitulo SPIE de la Universidad EAFIT es una organizacion estudiantil dedicada a la promocion y divulgacion de la optica y la fotonica, areas fundamentales para el desarrollo tecnologico del siglo XXI.
               </p>
               <p>
-                {"Somos parte de SPIE, la Sociedad Internacional de \u00D3ptica y Fot\u00F3nica, una de las organizaciones cient\u00EDficas m\u00E1s prestigiosas del mundo con m\u00E1s de 20,000 miembros en todo el planeta."}
+                Somos parte de SPIE, la Sociedad Internacional de Optica y Fotonica, una de las organizaciones cientificas mas prestigiosas del mundo con mas de 20,000 miembros en todo el planeta.
               </p>
               <p>
-                {"Nuestra misi\u00F3n es inspirar a la pr\u00F3xima generaci\u00F3n de cient\u00EDficos e ingenieros a trav\u00E9s de eventos, talleres y actividades de divulgaci\u00F3n cient\u00EDfica que acercan la luz y sus aplicaciones a la comunidad."}
+                Nuestra mision es inspirar a la proxima generacion de cientificos e ingenieros a traves de eventos, talleres y actividades de divulgacion cientifica que acercan la luz y sus aplicaciones a la comunidad.
               </p>
             </div>
           </div>
@@ -41,7 +41,7 @@ export function AboutSection() {
                   />
                 </svg>
                 <p className="text-muted-foreground text-sm">
-                  {"Espacio para imagen del Cap\u00EDtulo"}
+                  Espacio para imagen del Capitulo
                 </p>
               </div>
             </div>
