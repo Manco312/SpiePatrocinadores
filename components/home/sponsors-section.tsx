@@ -23,7 +23,7 @@ export function SponsorsSection() {
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto text-balance">
             Empresas e instituciones que han confiado en nosotros y apoyan 
-            la divulgacion cientifica en Colombia.
+            la divulgación científica en Colombia.
           </p>
         </div>
 
@@ -45,7 +45,7 @@ export function SponsorsSection() {
         </div>
 
         <p className="text-center text-muted-foreground mt-8 text-sm">
-          Quieres ver tu logo aqui? Contactanos para ser parte de nuestros patrocinadores.
+          ¿Quieres ver tu logo aquí? Contáctanos para ser parte de nuestros patrocinadores.
         </p>
       </div>
     </section>

@@ -25,16 +25,16 @@ export function HeroSection() {
 
         <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold mb-6">
           <span className="bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent glow-text">
-            Capitulo SPIE
+            Capítulo SPIE
           </span>
           <br />
           <span className="text-foreground">Universidad EAFIT</span>
         </h1>
 
         <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto mb-8 text-balance">
-          Somos el capitulo estudiantil de SPIE en la Universidad EAFIT, 
-          dedicados a promover la optica y la fotonica en Colombia. 
-          Unete como patrocinador y se parte del futuro de la ciencia.
+          Somos el capítulo estudiantil de SPIE en la Universidad EAFIT, 
+          dedicados a promover la óptica y la fotónica en Colombia. 
+          Únete como patrocinador y se parte del futuro de la ciencia.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -42,26 +42,25 @@ export function HeroSection() {
             Ver Paquetes de Patrocinio
           </Link>
           <Link href="/contacto" className="btn-secondary text-center">
-            Contactanos
+            Contáctanos
           </Link>
         </div>
-
-        {/* Scroll indicator */}
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
-          <svg
-            className="w-6 h-6 text-muted-foreground"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M19 14l-7 7m0 0l-7-7m7 7V3"
-            />
-          </svg>
-        </div>
+      </div>
+      {/* Scroll indicator */}
+      <div className="absolute bottom-4 left-1/2 -translate-x-1/2 animate-bounce">
+        <svg
+          className="w-6 h-6 text-muted-foreground"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M19 14l-7 7m0 0l-7-7m7 7V3"
+          />
+        </svg>
       </div>
     </section>
   );

@@ -108,7 +108,7 @@ export function StatsSection() {
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto text-balance">
             Cifras que demuestran el impacto de nuestra comunidad en redes sociales 
-            y el potencial de exposicion para nuestros patrocinadores.
+            y el potencial de exposición para nuestros patrocinadores.
           </p>
         </div>
 

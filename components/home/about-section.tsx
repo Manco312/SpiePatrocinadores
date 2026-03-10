@@ -13,13 +13,13 @@ export function AboutSection() {
             </h2>
             <div className="space-y-4 text-muted-foreground">
               <p>
-                El Capitulo SPIE de la Universidad EAFIT es una organizacion estudiantil dedicada a la promocion y divulgacion de la optica y la fotonica, areas fundamentales para el desarrollo tecnologico del siglo XXI.
+                El Capítulo SPIE de la Universidad EAFIT es una organización estudiantil dedicada a la promoción y divulgación de la óptica y la fotónica, áreas fundamentales para el desarrollo tecnológico del siglo XXI.
               </p>
               <p>
-                Somos parte de SPIE, la Sociedad Internacional de Optica y Fotonica, una de las organizaciones cientificas mas prestigiosas del mundo con mas de 20,000 miembros en todo el planeta.
+                Somos parte de SPIE, la Sociedad Internacional de Óptica y Fotonica, una de las organizaciones científicas más prestigiosas del mundo con más de 20,000 miembros en todo el planeta.
               </p>
               <p>
-                Nuestra mision es inspirar a la proxima generacion de cientificos e ingenieros a traves de eventos, talleres y actividades de divulgacion cientifica que acercan la luz y sus aplicaciones a la comunidad.
+                Nuestra misión es inspirar a la próxima generación de científicos e ingenieros a través de eventos, talleres y actividades de divulgación científica que acercan la luz y sus aplicaciones a la comunidad.
               </p>
             </div>
           </div>
