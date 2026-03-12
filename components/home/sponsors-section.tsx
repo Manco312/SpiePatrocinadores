@@ -10,6 +10,14 @@ export function SponsorsSection() {
     "cromar.png",
     "rosamaria.png",
     "skylight.png",
+    "biobosques.png",
+    "cetus.png",
+    "dc.png",
+    "gaia.png",
+    "aldeanikkei.png",
+    "pixel.png",
+    "luciferase.png",
+    "leone.png",
   ];
 
   return (
