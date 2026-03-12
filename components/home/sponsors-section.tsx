@@ -20,6 +20,7 @@ export function SponsorsSection() {
     "leone.png",
     "capela.png",
     "acentos.png",
+    "tegidos.png",
   ];
 
   return (
