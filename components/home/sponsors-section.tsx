@@ -18,6 +18,8 @@ export function SponsorsSection() {
     "pixel.png",
     "luciferase.png",
     "leone.png",
+    "capela.png",
+    "acentos.png",
   ];
 
   return (
