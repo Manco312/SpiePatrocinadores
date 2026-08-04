@@ -70,7 +70,7 @@ export default function ContactoPage() {
                   <div>
                     <h3 className="font-semibold text-sm mb-1">Teléfono</h3>
                     <a href="tel:+573195991889" className="text-muted-foreground hover:text-accent transition-colors text-sm">
-                      +57 319 599 1889
+                      +57 3148457472
                     </a>
                   </div>
                 </div>
@@ -90,12 +90,12 @@ export default function ContactoPage() {
 
               <div className="flex items-center gap-4">
                 <div className="w-16 h-16 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center">
-                  <span className="text-white font-bold text-xl">MC</span>
+                  <span className="text-white font-bold text-xl">SC</span>
                 </div>
                 <div>
-                  <h3 className="font-semibold text-lg">Maria Camila Gutierrez</h3>
-                  <a href="mailto:mcgutierrp@eafit.edu.co" className="text-muted-foreground hover:text-primary transition-colors text-sm">
-                    mcgutierrp@eafit.edu.co
+                  <h3 className="font-semibold text-lg">Susana Carmona Marin</h3>
+                  <a href="mailto:scarmonam@eafit.edu.co" className="text-muted-foreground hover:text-primary transition-colors text-sm">
+                    scarmonam@eafit.edu.co
                   </a>
                 </div>
               </div>
