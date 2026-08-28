@@ -13,18 +13,15 @@ export function EventSection() {
             <div className="flex flex-col lg:flex-row gap-8 items-center">
               <div className="flex-1">
                 <div className="inline-block px-4 py-2 rounded-full bg-primary/20 text-primary text-sm font-medium mb-4">
-                  11 - 15 de Mayo, 2026
+                  13 - 16 de Octubre, 2026
                 </div>
                 <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
                   <span className="bg-gradient-to-r from-accent via-primary to-accent bg-clip-text text-transparent">
-                    Semana de la Luz
+                    Dumb Science
                   </span>
                 </h2>
                 <p className="text-muted-foreground text-lg mb-6 text-balance">
-                  Nuestro evento insignia dedicado a la óptica y la fotónica. 
-                  Una semana llena de charlas, talleres, demostraciones y 
-                  actividades que celebran la luz y sus infinitas aplicaciones 
-                  en la ciencia y la tecnología.
+                  Nuestro evento dedicado a explorar un tema de la ciencia de la forma más divertida y entretenida posible. Con charlas magistrales, talleres prácticos y demostraciones en vivo, te invitamos a sumergirte en el fascinante mundo de la ciencia como nunca antes.
                 </p>
 
                 <div className="grid sm:grid-cols-2 gap-4">
@@ -35,7 +32,7 @@ export function EventSection() {
                       </svg>
                     </div>
                     <div>
-                      <h4 className="font-semibold text-sm">5 Días de Evento</h4>
+                      <h4 className="font-semibold text-sm">4 Días de Evento</h4>
                       <p className="text-muted-foreground text-sm">Actividades continuas</p>
                     </div>
                   </div>
@@ -48,7 +45,7 @@ export function EventSection() {
                     </div>
                     <div>
                       <h4 className="font-semibold text-sm">Charlas Magistrales</h4>
-                      <p className="text-muted-foreground text-sm">Expertos internacionales</p>
+                      <p className="text-muted-foreground text-sm">Expertos en sus campos</p>
                     </div>
                   </div>
 
@@ -86,8 +83,8 @@ export function EventSection() {
                   <div className="flex-1 w-full">
                     <div className="aspect-square max-w-md mx-auto rounded-2xl glass-card overflow-hidden relative">
                       <Image
-                        src="/imagen-semana.png"
-                        alt="Semana de la Luz"
+                        src="/imagen-dumb.JPG"
+                        alt="Dumb Science"
                         fill
                         className="object-cover"
                       />
